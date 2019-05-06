@@ -60,8 +60,8 @@ static void init_toxbot_state(void)
     Tox_Bot.chats_idx = 0;
     Tox_Bot.num_online_friends = 0;
 
-    /* 1 year default; anything lower should be explicitly set until we have a config file */
-    Tox_Bot.inactive_limit = 31536000;
+    /* 10 year default; anything lower should be explicitly set until we have a config file */
+    Tox_Bot.inactive_limit = 315360000;
 }
 
 static void catch_SIGINT(int sig)
