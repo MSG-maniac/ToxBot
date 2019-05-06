@@ -675,7 +675,7 @@ static void cmd_statusmessage(Tox *m, uint32_t friendnum, int argc, char (*argv)
     save_data(m, DATA_FILE);
 }
 
-static void cmd_title_set(Tox *m, uint32_t friendnum, int argc, char (*argv)[MAX_COMMAND_LENGTH])
+void cmd_title_set(Tox *m, uint32_t friendnum, int argc, char (*argv)[MAX_COMMAND_LENGTH])
 {
     const char *outmsg = NULL;
 

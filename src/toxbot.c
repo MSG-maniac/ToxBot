@@ -373,8 +373,14 @@ static Tox *init_tox(void)
     if (n_len == 0) {
         tox_self_set_name(m, (uint8_t *) "妮斯卡", strlen("妮斯卡"), NULL);
     }
+
+    //创建默认群
     char *myargv[2]={"programname","text"};
     cmd_group(m, 100, 1, myargv);
+
+    //设置默认群名称
+    char *myargvtitle[3]={"programname","1","\"group name A\""};
+    cmd_title_set(m, 100, 3, myargvtitle);
 
     return m;
 }
