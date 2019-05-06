@@ -194,7 +194,7 @@ static void cb_friend_message(Tox *m, uint32_t friendnumber, TOX_MESSAGE_TYPE ty
     message[length] = '\0';
 
     if (length && execute(m, friendnumber, message, length) == -1) {
-        outmsg = "Invalid command. Type help for a list of commands";
+        outmsg = "命令无效。 请发送help以获取命令列表";
         tox_friend_send_message(m, friendnumber, TOX_MESSAGE_TYPE_NORMAL, (uint8_t *) outmsg, strlen(outmsg), NULL);
     }
 }
@@ -364,14 +364,14 @@ static Tox *init_tox(void)
     size_t s_len = tox_self_get_status_message_size(m);
 
     if (s_len == 0) {
-        const char *statusmsg = "Send me the the command 'help' for more info";
+        const char *statusmsg = "向我发送命令'help'以获取更多信息";
         tox_self_set_status_message(m, (uint8_t *) statusmsg, strlen(statusmsg), NULL);
     }
 
     size_t n_len = tox_self_get_name_size(m);
 
     if (n_len == 0) {
-        tox_self_set_name(m, (uint8_t *) "ToxBot", strlen("ToxBot"), NULL);
+        tox_self_set_name(m, (uint8_t *) "妮斯卡", strlen("妮斯卡"), NULL);
     }
 
     return m;
