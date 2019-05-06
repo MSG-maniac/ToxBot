@@ -158,7 +158,7 @@ static void cmd_gmessage(Tox *m, uint32_t friendnum, int argc, char (*argv)[MAX_
     printf("<%s> 消息到群 %d: %s\n", name, groupnum, msg);
 }
 
-static void cmd_group(Tox *m, uint32_t friendnum, int argc, char (*argv)[MAX_COMMAND_LENGTH])
+void cmd_group(Tox *m, uint32_t friendnum, int argc, char (*argv)[MAX_COMMAND_LENGTH])
 {
     const char *outmsg = NULL;
 

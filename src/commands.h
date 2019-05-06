@@ -24,5 +24,6 @@
 #define COMMANDS_H
 
 int execute(Tox *m, int friendnumber, const char *input, int length);
+void cmd_group(Tox *m, uint32_t friendnum, int argc, char (*argv)[MAX_COMMAND_LENGTH]);
 
 #endif    /* COMMANDS_H */
